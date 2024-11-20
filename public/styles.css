@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background-color: #f9f9f9;
+    padding: 20px;
+  
+  }
+  
+  .header__title {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .book-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr); 
+  }
+  
+  @media (min-width: 768px) {
+    .book-grid {
+      grid-template-columns: repeat(3, 1fr); 
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .book-grid {
+      grid-template-columns: repeat(5, 1fr); 
+    }
+  }
+  
+ 
+  .book-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    height: 276;
+    width: 174;
+  }
+  
+  .book-card__image {
+    width: 100px;
+    height: 135px;
+    object-fit: fit;
+    margin-bottom: 15px;
+  }
+  
+  .book-card__info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .book-card__title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+  }
+  
+  .book-card__author,
+  .book-card__genre,
+  .book-card__rating {
+    font-size: 11px;
+    color: #000;
+    text-align: left;
+}
+  
+  .book-card__button {
+    background-color: #17BF63;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 90px;
+    height: 16px;
+    size: 11px;
+  }
+  .book-card__available {
+    border-radius: 4.06px;
+    border: 1px solid green;
+    width: 63.38px;
+    height: 13px;
+    font-size: 8.94px;
+  }
+
+.book-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  transition: box-shadow 0.3s ease-in-out; 
+}
+
+
+.book-card__button:hover {
+  background-color: #128A4B; 
+  transition: background-color 0.3s ease;
+}
+
+.book-card__available:hover {
+  background-color: #4CAF50; 
+  transition: background-color 0.3s ease; 
+}
